@@ -1,0 +1,37 @@
+@mixin em($size, $height) {
+  font-size: $size / 16 * 1em;
+  line-height: $height / $size * 1em;
+}
+
+@mixin rem($size, $height) {
+  font-size: $size / 16 * 1rem;
+  line-height: $height / $size * 1rem;
+}
+
+@mixin transition($property, $duration: 0.35s, $delay: 0) {
+  transition-delay: $delay;
+  transition-duration: $duration;
+  transition-property: $property;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin btn($width, $height, $color) {
+  @include em(18, 24);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $width;
+  height: $height;
+  color: #fff;
+  background-color: $color;
+  border-radius: 10px;
+}
+
+@mixin bgImg($url, $position, $size) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: $position;
+  background-size: $size;
+}

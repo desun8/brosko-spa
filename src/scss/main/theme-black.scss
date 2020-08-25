@@ -1,0 +1,155 @@
+body.theme-black {
+  $bg-color: #000;
+  $text-color: #000;
+
+  color: #fff;
+
+  .fixed-bg {
+    background-color: #222;
+
+    &::before {
+      @media (--laptopMin) {
+        background-image: url('../images/bg-main-desk--unsupport-dark.png');
+      }
+
+      @supports (mix-blend-mode: multiply) {
+        mix-blend-mode: color-burn;
+
+        @media (--laptopMin) {
+          background-image: url('../images/bg-main-desk.png');
+        }
+      }
+    }
+
+    &::after {
+      display: none;
+      // opacity: 0;
+    }
+  }
+
+  .header-top {
+    // background-color: #222;
+
+    @media (--onlySm) {
+      background-color: #222 !important;
+    }
+
+    @media (--laptopMin) {
+      background-color: rgba(#222, 0.97);
+    }
+
+    &_phone {
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &_menu {
+      span {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    color: #fff;
+
+    &_item {
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .btn {
+    &:hover {
+      color: $text-color;
+      background-color: #fff;
+    }
+  }
+
+  .modal-phone {
+    background-color: rgba(#fff, 0.95);
+
+    &_close {
+      svg {
+        fill: #000;
+      }
+    }
+
+    .title {
+      color: #000;
+    }
+
+    .phone {
+      -webkit-text-stroke-color: #000;
+    }
+  }
+
+  .cursor-phone,
+  .cursor-menu {
+    svg {
+      fill: #000;
+    }
+  }
+
+  .fixed-btn {
+    .show-feedback {
+      color: #fff;
+    }
+  }
+
+  .articles-ticker {
+    &_wrap {
+      background-color: transparent;
+      transition: none;
+
+      .inner {
+        -webkit-text-fill-color: #fff !important;
+        -webkit-text-stroke-width: 0 !important;
+      }
+    }
+
+    .inner {
+      -webkit-text-stroke-color: #fff;
+    }
+  }
+
+  .title-outline {
+    -webkit-text-stroke-color: #676767;
+  }
+
+  .articles-block_gradient-bg {
+    background: linear-gradient(180deg, rgba(34, 34, 34, 0.97)35.48%, rgba(196, 196, 196, 0) 100%);
+  }
+
+  .insta-block_next {
+    svg {
+      fill: #fff;
+    }
+  }
+
+  .copyright {
+    color: #fff;
+  }
+
+  .wa-link {
+    svg {
+      fill: #fff;
+    }
+  }
+
+  .down-arrow {
+
+    &_text,
+    &_line {
+      background: linear-gradient(transparent, #fff, transparent);
+      background-repeat: no-repeat;
+      background-size: 80%;
+    }
+
+    &_text {
+      background-clip: text;
+    }
+  }
+}

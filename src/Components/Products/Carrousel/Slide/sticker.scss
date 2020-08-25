@@ -1,0 +1,69 @@
+.sticker {
+  width: 100px * 0.64;
+  height: 100px * 0.64;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (--mobileSm) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (--laptopMin) {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+// Новинка
+.sticker_1 {
+  background-image: url('./img/sticker_1.svg');
+}
+
+// Первая цена
+.sticker_2 {
+  background-image: url('./img/sticker_2.svg');
+}
+
+// Акция
+.sticker_3 {
+  background-image: url('./img/sticker_3.svg');
+}
+
+// Интересное предложение
+.sticker_4 {
+  background-image: url('./img/sticker_4.svg');
+}
+
+// Кухня Броско Маркет
+.sticker_5 {
+  background-image: url('./img/sticker_5.svg');
+}
+
+// Эко Био Веган
+.sticker_6 {
+  background-image: url('./img/sticker_6.svg');
+}
+
+// Стикер со скидкой
+.sticker-sale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_text {
+    @include em(22, 22);
+
+    color: #fff;
+    font-weight: 700;
+
+    transform: rotate(-22deg) translateZ(0);
+
+    @media (--mobileSm) {
+      @include em(36, 38);
+    }
+  }
+}

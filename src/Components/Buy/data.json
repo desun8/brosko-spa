@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "color": "#D258E9",
+      "id": 1,
+      "name": "Название 1",
+      "img": "./img/-test-card-bg-1.png",
+      "link": "http://test.ru",
+      "desc": "<p>Форматированный </p>\r\n\r\n<p>текст</p>",
+      "gallery": [
+              [
+                "./img/-test-card-bg-1.png",
+                "./img/-test-card-bg-2.png"
+              ],
+              [
+                "files/goods/3.jpg",
+                "files/goods/4.jpg"
+              ]
+            ],
+      "created_at": "2019-10-21 00:41:29",
+      "updated_at": "2019-10-21 00:48:20"
+    },
+    {
+      "color": "#58E98D",
+      "id": 2,
+      "name": "Название 2",
+      "img": "./img/-test-card-bg-2.png",
+      "link": null,
+      "desc": "<p>Картинка в тексте: </p>\r\n\r\n<p><img alt=\"\" height=\"262\" src=\"/images/uploads/0cb09ca854176e677e479c6eac9825f8.jpg\" width=\"262\" /></p>",
+      "gallery": [],
+      "created_at": "2019-10-21 01:17:24",
+      "updated_at": "2019-10-21 01:17:24"
+    },
+    {
+      "color": "#586AE9",
+      "id": 3,
+      "name": "Название 3",
+      "img": "./img/-test-card-bg-1.png",
+      "link": "http://test.ru",
+      "desc": "<p>Форматированный </p>\r\n\r\n<p>текст</p>",
+      "gallery": [
+              [
+                "./img/-test-card-bg-1.png",
+                "./img/-test-card-bg-2.png"
+              ],
+              [
+                "files/goods/3.jpg",
+                "files/goods/4.jpg"
+              ]
+            ],
+      "created_at": "2019-10-21 00:41:29",
+      "updated_at": "2019-10-21 00:48:20"
+    },
+    {
+      "color": "#D258E9",
+      "id": 4,
+      "name": "Название 4",
+      "img": "./img/-test-card-bg-2.png",
+      "link": null,
+      "desc": "<p>Картинка в тексте: </p>\r\n\r\n<p><img alt=\"\" height=\"262\" src=\"/images/uploads/0cb09ca854176e677e479c6eac9825f8.jpg\" width=\"262\" /></p>",
+      "gallery": [],
+      "created_at": "2019-10-21 01:17:24",
+      "updated_at": "2019-10-21 01:17:24"
+    },
+    {
+      "color": "#58E98D",
+      "id": 5,
+      "name": "Название 5",
+      "img": "./img/-test-card-bg-1.png",
+      "link": "http://test.ru",
+      "desc": "<p>Форматированный </p>\r\n\r\n<p>текст</p>",
+      "gallery": [
+              [
+                "./img/-test-card-bg-1.png",
+                "./img/-test-card-bg-2.png"
+              ],
+              [
+                "files/goods/3.jpg",
+                "files/goods/4.jpg"
+              ]
+            ],
+      "created_at": "2019-10-21 00:41:29",
+      "updated_at": "2019-10-21 00:48:20"
+    },
+    {
+      "color": "#586AE9",
+      "id": 6,
+      "name": "Название 6",
+      "img": "./img/-test-card-bg-2.png",
+      "link": null,
+      "desc": "<p>Картинка в тексте: </p>\r\n\r\n<p><img alt=\"\" height=\"262\" src=\"/images/uploads/0cb09ca854176e677e479c6eac9825f8.jpg\" width=\"262\" /></p>",
+      "gallery": [],
+      "created_at": "2019-10-21 01:17:24",
+      "updated_at": "2019-10-21 01:17:24"
+    },
+    {
+      "color": "#D258E9",
+      "id": 7,
+      "name": "Название 7",
+      "img": "./img/-test-card-bg-1.png",
+      "link": "http://test.ru",
+      "desc": "<p>Форматированный </p>\r\n\r\n<p>текст</p>",
+      "gallery": [
+              [
+                "./img/-test-card-bg-1.png",
+                "./img/-test-card-bg-2.png"
+              ],
+              [
+                "files/goods/3.jpg",
+                "files/goods/4.jpg"
+              ]
+            ],
+      "created_at": "2019-10-21 00:41:29",
+      "updated_at": "2019-10-21 00:48:20"
+    },
+    {
+      "color": "#58E98D",
+      "id": 8,
+      "name": "Название 8",
+      "img": "./img/-test-card-bg-2.png",
+      "link": null,
+      "desc": "<p>Картинка в тексте: </p>\r\n\r\n<p><img alt=\"\" height=\"262\" src=\"/images/uploads/0cb09ca854176e677e479c6eac9825f8.jpg\" width=\"262\" /></p>",
+      "gallery": [],
+      "created_at": "2019-10-21 01:17:24",
+      "updated_at": "2019-10-21 01:17:24"
+    }
+  ]
+}

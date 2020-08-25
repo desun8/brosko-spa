@@ -1,0 +1,242 @@
+.places {
+  max-width: 100%;
+  overflow: hidden;
+
+  @media (--laptopMin) {
+    position: relative;
+    z-index: 4;
+    // min-height: 1200px;
+    // min-height: 1020px;
+    padding-top: 200px;
+    background-color: #fff;
+    overflow: visible;
+  }
+}
+
+.hero {
+  // @include bgImg('./img/bg.png', center bottom, contain);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+  margin-bottom: 20px;
+
+  @media (--laptopMin) {
+    align-items: flex-start;
+
+    width: 50%;
+    height: initial;
+    min-height: 100vh;
+    margin-bottom: 0;
+    // padding-top: 80px;
+
+    // background: none;
+  }
+
+  .logo {
+    @include bgImg('./img/logo-title-places.svg', center, contain);
+
+    --width: 350px;
+    --height: 204px;
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: calc(var(--width) * 0.8);
+    height: calc(var(--height) * 0.8);
+
+    @media (--mobileSm) {
+      max-width: calc(var(--width) * 0.95);
+      height: calc(var(--height) * 0.95);
+    }
+
+    @media (--mobileLg) {
+      max-width: var(--width);
+      height: var(--height);
+    }
+
+    @media (--laptopMin) {
+      --width: 580px;
+      --height: 300px;
+    }
+
+    @media (--laptopLg) {
+      --width: 660px;
+      --height: 380px;
+
+      transform: translateY(-50px);
+    }
+
+    @media (--desktop) {
+      --width: 816px;
+      --height: 472px;
+    }
+  }
+
+  .bg-pattern {
+    @include bgImg('../../img/bg-pattern.svg', center -70px, 340px);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.4;
+    transform: scaleY(-1);
+
+    @media (--mobileSm) {
+      background-size: 390px;
+      background-position-y: -100px;
+    }
+
+    @media (--mobileLg) {
+      background-size: 420px;
+      background-position-y: -120px;
+    }
+
+    @media (--laptopMin) {
+      @include bgImg('../../img/bg-pattern-desk.svg', -60px top, 710px);
+
+      top: 32%;
+      height: 680px;
+      transform: none;
+    }
+
+    @media (--laptopLg) {
+      top: 40%;
+      background-position-x: 0;
+    }
+
+    @media (--desktop) {
+      top: 25%;
+      height: 1100px;
+      background-size: 1100px;
+      background-position-x: 120%;
+    }
+
+    @media (--desktop1860) {
+      top: 30%;
+    }
+  }
+}
+
+
+.card-list {
+  --card-width: 270px;
+  --card-height: 318px;
+  --card-ml: 38px;
+  --card-row-size: 3;
+
+  display: flex;
+
+  width: calc((var(--card-width) * var(--card-row-size)) + (var(--card-ml) * var(--card-row-size)));
+  padding-left: 15px;
+
+  overflow-x: scroll;
+
+  @media (--laptopMin) {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 2;
+
+    justify-content: center;
+    // align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    padding-top: 300px;
+
+    overflow: hidden;
+  }
+
+  @media (--desktop) {
+    padding-top: 400px;
+  }
+}
+
+.duck-places {
+  @include bgImg('./img/duck.svg', left center, 184px);
+
+  position: fixed;
+  bottom: -60px;
+  left: 0;
+
+  width: 100%;
+  height: 210px;
+  transform: translateX(100%);
+
+  @media (--desktop) {
+    transform: translateX(110%);
+  }
+
+  @media (max-height: 780px) {
+    display: none;
+  }
+}
+
+.btn-to-top {
+  position: absolute;
+  top: 50%;
+  right: 38px;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 60px;
+  height: 134px;
+
+  background-color: #fff;
+  border: 2px solid rgba(#000, 0.3);
+  border-radius: 70px;
+
+  transition-duration: 0.35s;
+  transition-property: background-color, border-color;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+
+    .text {
+      color: #fff;
+    }
+
+    .icon {
+      fill: #fff;
+    }
+  }
+
+  .text {
+    @include em(14, 16);
+    @include transition(color);
+
+    position: absolute;
+    left: 50%;
+    bottom: 38px;
+    transform-origin: 2% 50%;
+    transform: rotate(-90deg) translate3d(-50%, 0, 0);
+
+    color: rgba(#000, 0.3);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+  }
+
+  .icon {
+    @include transition(fill);
+
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    fill: rgba(#000, 0.3);
+  }
+}

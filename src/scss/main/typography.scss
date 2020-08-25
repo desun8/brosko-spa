@@ -1,0 +1,52 @@
+// All typography styles
+// @mixin em($size, $height) {
+//   font-size: $size / 16 * 1em;
+//   line-height: $height / $size * 1em;
+// }
+
+// @mixin rem($size, $height) {
+//   font-size: $size / 16 * 1rem;
+//   line-height: $height / $size * 1rem;
+// }
+
+// %fz28 {
+//   @include em(28, 40);
+// }
+
+// %fz22 {
+//   @include em(22, 34);
+// }
+
+// %p {
+//   @include em(14, 22);
+
+//   margin: 0;
+//   font-family: $font-sec;
+
+//   @media (--laptopMin) {
+//     @include em(18, 28);
+//   }
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap&subset=cyrillic');
+
+// TITLES
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  // font-weight: 400;
+}
+
+// h4 {
+//   font-weight: 400;
+// }
+
+
+// PARAGRAPHS and other TEXT
+// p {
+//   @extend %p;
+// }

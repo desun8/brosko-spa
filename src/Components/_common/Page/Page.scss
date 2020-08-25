@@ -1,0 +1,506 @@
+.page {
+  padding: 0;
+
+  &.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    @media (--laptopMin) {
+      background-color: rgba(#000, 0.8);
+      z-index: 99999;
+    }
+  }
+}
+
+
+.wrap-scroll {
+  // display: flex;
+  // justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+
+  overflow-y: scroll;
+
+  @media (--laptopMin) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+.wrap {
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (--laptopMin) {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 630px;
+    margin: 0 auto;
+    padding: 40px 45px;
+
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  >* {
+    @media (--laptopMin) {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.header-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  border-radius: 10px;
+
+  @media (--laptopMin) {
+    height: 90px;
+    margin-bottom: 36px;
+    box-shadow: 0 10px 30px rgba(#000, 0.2);
+  }
+
+  .img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // TODO: удалить, для теста
+    // background-image: url('./-test-bg.png') !important;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(180deg, rgba(#000, 0) -13%, rgba(#000, 0.7) 110.5%);
+      border-radius: 10px;
+    }
+
+    .places & {
+      @media (--laptopMin) {
+        opacity: 0.1;
+        filter: blur(5.2px);
+      }
+
+      &::after {
+        @media (--laptopMin) {
+          content: none;
+        }
+      }
+    }
+
+    .job & {
+      opacity: 0.3;
+      filter: blur(5px);
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .img-food {
+    display: none;
+
+    @media (--laptopMin) {
+      position: absolute;
+      top: 50%;
+      // right: 20px;
+      right: 10px;
+      transform: translateY(-50%);
+
+      display: block;
+      // width: 130px;
+      // height: 70px;
+      width: 160px;
+      height: 120px;
+
+      // background-image: url('./-test-bg.png') !important;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .name {
+    @include em(22, 24);
+
+    position: relative;
+    z-index: 2;
+    padding: 8px 10px;
+
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    border-radius: 5px;
+
+    .events & {
+      @include em(16, 16);
+
+      padding: 0;
+      font-weight: 600;
+    }
+
+    .places & {
+      background-color: transparent !important;
+
+      @media (--laptopMin) {
+        margin-bottom: 5px;
+        padding: 0;
+      }
+    }
+
+    .job & {
+      color: #000;
+      background-color: #fff !important;
+    }
+  }
+
+  .full-name {
+    @include em(16, 20);
+
+    position: relative;
+    z-index: 2;
+
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .date {
+    @include em(26, 26);
+
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 10px;
+
+    color: #fff;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+}
+
+.link-360 {
+  @include em(22, 26);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  @media (--laptopMin) {
+    flex-basis: auto;
+    flex-grow: 0;
+    order: 1;
+
+    width: 270px;
+    margin-right: 64px;
+
+    transition-duration: 0.35s;
+    transition-property: color, background-color, box-shadow;
+    transition-timing-function: ease-in-out;
+  }
+
+  &::before {
+    @include bgImg('./img/icon-360.svg', center, 92px);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+
+    width: 112px;
+    height: 100%;
+
+    opacity: 0.1;
+  }
+
+  &:hover {
+    @media (--laptopMin) {
+      color: #fff;
+      background-color: #000;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.route-link {
+  @include em(44*0.8, 50*0.8);
+
+  -webkit-text-stroke: 1px #000;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (--mobileSm) {
+    @include em(44, 50);
+  }
+
+  @media (--laptopMin) {
+    @include em(26, 30);
+
+    -webkit-text-stroke: 0.5px #2f4d42;
+
+    flex-basis: auto;
+    flex-grow: 0;
+    order: 2;
+
+    display: inline-flex;
+
+    color: #2f4d42;
+
+    transition-duration: 0.35s;
+    transition-property: color, -webkit-text-stroke;
+    transition-timing-function: ease-in-out;
+  }
+
+  &--buy {
+    -webkit-text-stroke: 1px #9d58e9;
+    color: #9d58e9;
+
+    @media (--laptopMin) {
+      -webkit-text-stroke: 0.5px #2f4d42;
+      color: #2f4d42;
+    }
+
+    &:hover {
+      @media (--laptopMin) {
+        -webkit-text-stroke: 0.5px #9d58e9;
+        color: #9d58e9;
+      }
+
+      svg {
+        @media (--laptopMin) {
+          fill: #9d58e9 !important;
+        }
+      }
+    }
+
+    svg {
+      fill: #9d58e9 !important;
+
+      @media (--laptopMin) {
+        fill: #2f4d42 !important;
+      }
+    }
+  }
+
+  &--job {
+    -webkit-text-stroke: 1px #7bb62e;
+    color: #7bb62e;
+
+    @media (--laptopMin) {
+      -webkit-text-stroke: 0.5px #2f4d42;
+      color: #2f4d42;
+    }
+
+    &:hover {
+      @media (--laptopMin) {
+        -webkit-text-stroke: 0.5px #7ab62d;
+        color: #7ab62d;
+      }
+
+      svg {
+        @media (--laptopMin) {
+          fill: #7ab62d !important;
+        }
+      }
+    }
+
+    svg {
+      fill: #7bb62e !important;
+
+      @media (--laptopMin) {
+        fill: #2f4d42 !important;
+      }
+    }
+  }
+
+  svg {
+    fill: #000;
+    transform: translate3d(4px, -1px, 0) scale(0.9);
+
+    @media (--mobileSm) {
+      transform: translate3d(4px, -2px, 0) scale(1);
+    }
+
+    @media (--laptopMin) {
+      @include transition(fill);
+
+      transform: scale(0.7);
+    }
+
+  }
+}
+
+.btn-back {
+  @include btn(60px, 60px, #dc590c);
+  @include transition(transform);
+
+  position: fixed;
+  top: 38px;
+  right: 38px;
+  z-index: 10;
+
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+
+  &::before,
+  &::after {
+    @media (--laptopMin) {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+    }
+  }
+
+  &::before {
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+  }
+}
+
+
+// Стили вакансии
+.job-list {
+  position: relative;
+  margin-bottom: 45px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px 5px 5px 0;
+
+  @media (--laptopMin) {
+    margin-bottom: 60px;
+    padding: 20px;
+  }
+
+  &::after {
+    @include bgImg('./img/triangle.svg', 0 0, 34px);
+
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 60px;
+  }
+
+  .title {
+    @include em(22, 26);
+
+    margin-bottom: 10px;
+  }
+
+  .list {
+    /deep/ ul {
+      @include em(16, 20);
+
+      margin: 0;
+      padding: 0;
+      padding-left: 18px;
+
+      font-weight: 500;
+    }
+  }
+}
+
+.show-feedback {
+  @include btn(100%, 55px, #7bb62e);
+
+  margin-bottom: 70px;
+  border-radius: 5px;
+
+  @media (--laptopMin) {
+    @include btn(270px, 80px, #7ab62d);
+    @include em(22, 22);
+
+    display: inline-flex;
+    margin-right: 34px;
+
+    font-weight: 700;
+    border-radius: 10px;
+
+    transition: box-shadow 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  }
+
+  &:hover {
+    @media (--laptopMin) {
+      background-color: #6fa626;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.welcome {
+  @media (--onlySm) {
+    z-index: 999999 !important;
+    padding-top: 80px;
+    padding-bottom: 140px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  &_img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn-back {
+    @media (--onlySm) {
+      @include bgImg('./img/icon-cross-bold.svg', center, contain);
+
+      top: auto;
+      left: 50%;
+      bottom: 50px;
+      transform: translateX(-50%);
+
+      width: 45px;
+      height: 45px;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+
+  .wrap-scroll {
+    @media (--onlySm) {
+      max-height: 80vh;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .wrap {
+      @media (--onlySm) {
+        padding: 20px;
+      }
+    }
+  }
+}

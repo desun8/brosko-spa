@@ -1,0 +1,135 @@
+.card {
+  --card-width: 270px;
+  --card-height: 318px;
+  --card-ml: 38px;
+  --transY: 84px;
+
+  @media (--laptopMin) {
+    --card-ml: 120px;
+  }
+
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  width: var(--card-width);
+  height: var(--card-height);
+  margin-left: var(--card-ml);
+  margin-bottom: 20px;
+  padding: 20px 15px;
+  padding-top: 180px;
+
+  border-radius: 10px;
+
+  @media (--laptopMin) {
+    @include transition(box-shadow);
+    
+    align-items: flex-end;
+    align-content: flex-end;
+    padding: 20px 15px;
+  }
+
+  &:hover {
+    @media (--laptopMin) {
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:nth-of-type(1) {
+    // background-color: #ffa13d;
+
+    @media (--laptopMin) {
+      transform: translateY(var(--transY));
+    }
+  }
+
+  &:nth-of-type(2) {
+    // background-color: #5cbf5f;
+  }
+
+  &:nth-of-type(3) {
+    // background-color: #da3d4d;
+
+    @media (--laptopMin) {
+      transform: translateY(calc(var(--transY) * -1));
+    }
+  }
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // TODO: удалить, для теста
+  // background-image: url('./-test-bg.png') !important;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.1;
+  filter: blur(5.2px);
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 180px;
+
+  // TODO: удалить, для теста
+  // background-image: url('./-test-img.png') !important;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (--laptopMin) {
+    // top: -40px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 352px;
+    height: 224px;
+  }
+}
+
+.title,
+.desc {
+  position: relative;
+  z-index: 2;
+
+  flex-basis: 100%;
+
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title {
+  @include em(26, 32);
+
+  margin-bottom: 15px;
+
+  font-weight: 800;
+}
+
+.desc {
+  @include em(18, 20);
+}

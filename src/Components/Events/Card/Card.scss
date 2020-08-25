@@ -1,0 +1,146 @@
+.card {
+  --card-width: 100%;
+  --card-height: 100px;
+  --card-mb: 20px;
+
+  @media (--laptopMin) {
+    --card-width: 264px;
+    --card-height: 264px;
+    --card-mb: 40px;
+  }
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  // align-content: flex-end;
+
+  width: var(--card-width);
+  height: var(--card-height);
+  margin-bottom: var(--card-mb);
+  padding: 15px 20px;
+
+  border-radius: 10px;
+
+  @media (--laptopMin) {
+    @include transition(box-shadow);
+    
+    justify-content: flex-end;
+
+    margin-left: var(--card-mb);
+    padding: 0;
+  }
+
+  &:nth-child(2n-1) {
+    @media (--laptopMin) {
+      margin-left: 0;
+      transform: translateY(40px);
+    }
+  }
+
+  &:hover {
+    @media (--laptopMin) {
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .text {
+      @media (--laptopMin) {
+        background-color: #262626;
+      }
+    }
+  }
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // TODO: удалить, для теста
+  // background-image: url('./-test-bg.png') !important;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, rgba(#000, 0) -13%, rgba(#000, 0.7) 110.5%);
+    border-radius: 10px;
+
+    @media (--laptopMin) {
+      background: linear-gradient(180deg, rgba(#000, 0) 49.95%, #000 130.51%);
+    }
+  }
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+
+  @media (--laptopMin) {
+    @include transition(background-color);
+
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .title,
+  .date {
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .title {
+    @include em(16, 16);
+
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .date {
+    @include em(26, 26);
+
+    display: inline-block;
+    margin-bottom: 10px;
+
+    font-weight: 800;
+    text-transform: capitalize;
+
+    @media (--laptopMin) {
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.icon {
+  @include bgImg('./img/icon-more.svg', center, 25px);
+
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 25px;
+
+  @media (--laptopMin) {
+    top: 20px;
+    transform: rotate(90deg);
+  }
+}

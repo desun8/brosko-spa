@@ -1,0 +1,41 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($justify-content: flex-start, $align-items: flex-start, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin wrap {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1400 + 20 * 2px;
+  width: 100%;
+}
+
+%flex {
+  @include flex;
+}
+
+%flex-center {
+  @include flex-center;
+}
+
+%wrap {
+  @include wrap;
+}
+
+.wrap {
+  @extend %wrap;
+
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+}

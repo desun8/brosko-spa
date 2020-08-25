@@ -1,0 +1,335 @@
+// розовый (фуксия)
+.c-fuchsia {
+  .circle-inner {
+    &--1 {
+      background-color: #d258e9;
+    }
+
+    &--2 {
+      background-color: #c34fd9;
+    }
+
+    &--3 {
+      background-color: #b748cc;
+    }
+
+    &--4 {
+      background-color: #aa3fbe;
+    }
+  }
+}
+
+// фиолетовый
+.c-puprle-light {
+  .circle-inner {
+    &--1 {
+      background-color: #aa3fbe;
+    }
+
+    &--2 {
+      background-color: #9150d8;
+    }
+
+    &--3 {
+      background-color: #884acb;
+    }
+
+    &--4 {
+      background-color: #7f45bd;
+    }
+  }
+}
+
+// фиолетовый 2
+.c-puprle {
+  .circle-inner {
+    &--1 {
+      background-color: #8958e9;
+    }
+
+    &--2 {
+      background-color: #8051dd;
+    }
+
+    &--3 {
+      background-color: #794bd6;
+    }
+
+    &--4 {
+      background-color: #7243cd;
+    }
+  }
+}
+
+// синий
+.c-blue {
+  .circle-inner {
+    &--1 {
+      background-color: #586ae9;
+    }
+
+    &--2 {
+      background-color: #5163e2;
+    }
+
+    &--3 {
+      background-color: #4c5dd8;
+    }
+
+    &--4 {
+      background-color: #4758d6;
+    }
+  }
+}
+
+// голубой
+.c-cyan {
+  .circle-inner {
+    &--1 {
+      background-color: #7fd7f9;
+    }
+
+    &--2 {
+      background-color: #6dc4e6;
+    }
+
+    &--3 {
+      background-color: #60b1d1;
+    }
+
+    &--4 {
+      background-color: #61a2bb;
+    }
+  }
+}
+
+// изумрудный
+.c-emerald {
+  .circle-inner {
+    &--1 {
+      background-color: #58e9cb;
+    }
+
+    &--2 {
+      background-color: #49dbbd;
+    }
+
+    &--3 {
+      background-color: #43d2b4;
+    }
+
+    &--4 {
+      background-color: #3ac1a5;
+    }
+  }
+}
+
+// салатовый
+.c-green-light {
+  .circle-inner {
+    &--1 {
+      background-color: #58e98d;
+    }
+
+    &--2 {
+      background-color: #4dd880;
+    }
+
+    &--3 {
+      background-color: #47cf78;
+    }
+
+    &--4 {
+      background-color: #40c470;
+    }
+  }
+}
+
+// зелёный
+.c-green {
+  .circle-inner {
+    &--1 {
+      background-color: #8cca39;
+    }
+
+    &--2 {
+      background-color: #84bf35;
+    }
+
+    &--3 {
+      background-color: #7eb633;
+    }
+
+    &--4 {
+      background-color: #78ac33;
+    }
+  }
+}
+
+// жёлтый
+.c-yellow {
+  .circle-inner {
+    &--1 {
+      background-color: #ffbb20;
+    }
+
+    &--2 {
+      background-color: #f0af1a;
+    }
+
+    &--3 {
+      background-color: #e2a519;
+    }
+
+    &--4 {
+      background-color: #d09713;
+    }
+  }
+}
+
+// песочный
+.c-sand {
+  .circle-inner {
+    &--1 {
+      background-color: #ffa23d;
+    }
+
+    &--2 {
+      background-color: #eb9437;
+    }
+
+    &--3 {
+      background-color: #db8b35;
+    }
+
+    &--4 {
+      background-color: #cb8132;
+    }
+  }
+}
+
+// огненная сиенна крайола
+.c-sienna-light {
+  .circle-inner {
+    &--1 {
+      background-color: #e98558;
+    }
+
+    &--2 {
+      background-color: #dc784b;
+    }
+
+    &--3 {
+      background-color: #d27145;
+    }
+
+    &--4 {
+      background-color: #c7683d;
+    }
+  }
+}
+
+// сиена жженая
+.c-sienna {
+  .circle-inner {
+    &--1 {
+      background-color: #e96958;
+    }
+
+    &--2 {
+      background-color: #d85e4d;
+    }
+
+    &--3 {
+      background-color: #d35746;
+    }
+
+    &--4 {
+      background-color: #c9503f;
+    }
+  }
+}
+
+// светлый карминово-розовый
+.c-red-light {
+  .circle-inner {
+    &--1 {
+      background-color: #e85868;
+    }
+
+    &--2 {
+      background-color: #df5160;
+    }
+
+    &--3 {
+      background-color: #d64b5a;
+    }
+
+    &--4 {
+      background-color: #cf4252;
+    }
+  }
+}
+
+// слишком красный
+.c-red {
+  .circle-inner {
+    &--1 {
+      background-color: #f8293e;
+    }
+
+    &--2 {
+      background-color: #e32639;
+    }
+
+    &--3 {
+      background-color: #d22032;
+    }
+
+    &--4 {
+      background-color: #c01b2c;
+    }
+  }
+}
+
+// пурпурный
+.c-pink {
+  .circle-inner {
+    &--1 {
+      background-color: #e85893;
+    }
+
+    &--2 {
+      background-color: #dc508a;
+    }
+
+    &--3 {
+      background-color: #d54c84;
+    }
+
+    &--4 {
+      background-color: #cc457c;
+    }
+  }
+}
+
+// арктиклэди
+.c-grey {
+  .circle-inner {
+    &--1 {
+      background-color: #ededed;
+    }
+
+    &--2 {
+      background-color: #d8d8d8;
+    }
+
+    &--3 {
+      background-color: #c6c6c6;
+    }
+
+    &--4 {
+      background-color: #b4b4b4;
+    }
+  }
+}

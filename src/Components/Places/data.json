@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Наименование",
+      "full_name": "Более полная расшифровка наименования",
+      "img_1": "files/places/2d1a3752c411ade19c23bb37df258032.png",
+      "img_2": "files/places/22174b72e588030adf4a9ee6c751b497.jpg",
+      "img_3": "files/places/8aefca69f3908e86158f6127d75bd123.jpg",
+      "desc": "<p>Полноценный текст, может содержать галереи, например так:</p>\r\n\r\n<p><input class=\"tgallery\" data-id=\"0\" disabled=\"disabled\" type=\"text\" value=\"Галерея #1\" /></p>",
+      "gallery": [
+        [
+          "files/places/e6e6c37fd892b5d10154cb591b0c7866.jpg",
+          "files/places/7cd86d824718e8c8539e2474e957dadb.jpg"
+        ]
+      ],
+      "created_at": "2019-10-22 00:58:21",
+      "updated_at": "2019-10-22 01:17:05"
+    },
+    {
+      "id": 2,
+      "name": "Наименование 2",
+      "full_name": "Более полная расшифровка наименования",
+      "img_1": "files/places/2d1a3752c411ade19c23bb37df258032.png",
+      "img_2": "files/places/22174b72e588030adf4a9ee6c751b497.jpg",
+      "img_3": "files/places/8aefca69f3908e86158f6127d75bd123.jpg",
+      "desc": "<p>Полноценный текст, может содержать галереи, например так:</p>\r\n\r\n<p><input class=\"tgallery\" data-id=\"0\" disabled=\"disabled\" type=\"text\" value=\"Галерея #1\" /></p>",
+      "gallery": [
+        [
+          "files/places/e6e6c37fd892b5d10154cb591b0c7866.jpg",
+          "files/places/7cd86d824718e8c8539e2474e957dadb.jpg"
+        ]
+      ],
+      "created_at": "2019-10-22 00:58:21",
+      "updated_at": "2019-10-22 01:17:05"
+    },
+    {
+      "id": 3,
+      "name": "Наименование 3",
+      "full_name": "Более полная расшифровка наименования",
+      "img_1": "files/places/2d1a3752c411ade19c23bb37df258032.png",
+      "img_2": "files/places/22174b72e588030adf4a9ee6c751b497.jpg",
+      "img_3": "files/places/8aefca69f3908e86158f6127d75bd123.jpg",
+      "desc": "<p>Полноценный текст, может содержать галереи, например так:</p>\r\n\r\n<p><input class=\"tgallery\" data-id=\"0\" disabled=\"disabled\" type=\"text\" value=\"Галерея #1\" /></p>",
+      "gallery": [
+        [
+          "files/places/e6e6c37fd892b5d10154cb591b0c7866.jpg",
+          "files/places/7cd86d824718e8c8539e2474e957dadb.jpg"
+        ]
+      ],
+      "created_at": "2019-10-22 00:58:21",
+      "updated_at": "2019-10-22 01:17:05"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+@mixin trans-opt($duration: 0.35s, $delay: 0) {
+  transition-delay: $delay;
+  transition-duration: $duration;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin trans {
+  transition: all 0.35s ease-in-out;
+}
+
+@mixin trans-slow {
+  transition: all 0.65s ease-in-out;
+}
+
+%trans {
+  @include trans;
+}
+
+%trans-slow {
+  @include trans-slow;
+}
+
+%link-underline {
+  position: relative;
+
+  &::after {
+    @extend %trans;
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  &:hover::after {
+    @media (--tablet960) {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

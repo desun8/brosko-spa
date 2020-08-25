@@ -1,0 +1,136 @@
+.card {
+  --card-width: 100%;
+  --card-height: 200px;
+  --card-mb: 20px;
+
+  @media (--laptopMin) {
+    --card-width: 264px;
+    --card-height: 264px;
+    --card-mb: 40px;
+  }
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  width: var(--card-width);
+  height: var(--card-height);
+  margin-bottom: var(--card-mb);
+  padding: 20px;
+
+  border-radius: 10px;
+
+  @media (--laptopMin) {
+    @include transition(box-shadow);
+    margin-left: var(--card-mb);
+  }
+
+  &:hover {
+    @media (--laptopMin) {
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &:nth-of-type(2n-1) {
+    @media (--laptopMin) {
+      margin-left: 0;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    @media (--laptopMin) {
+      transform: translateY(var(--card-mb));
+    }
+  }
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // TODO: удалить, для теста
+  // background-image: url('./-test-bg.png') !important;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.3;
+  filter: blur(5px);
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -60%, 0);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+
+  // TODO: удалить, для теста
+  // background-image: url('./-test-icon.svg') !important;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+
+  @media (--laptopMin) {
+    width: 128px;
+    height: 128px;
+  }
+
+  /deep/ svg {
+    width: 100%;
+    fill: #fff;
+
+    * {
+      fill: #fff !important;
+    }
+  }
+}
+
+.title {
+  @include em(22, 24);
+
+  position: relative;
+  z-index: 2;
+  padding: 8px 10px;
+
+  background-color: #fff;
+
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  border-radius: 5px;
+}
+
+.icon-arrow {
+  @include bgImg('./img/icon-more.svg', center, 25px);
+
+  display: none;
+
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 25px;
+}

@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  // -webkit-overflow-scrolling: touch;
+  min-height: 100%;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 100%;
+  // color: #000;
+}
+
+// Специальные классы
+.only-lg {
+  @media (--onlySm) {
+    display: none !important;
+  }
+}
+
+.only-sm {
+  @media (--laptopMin) {
+    display: none !important;
+  }
+}

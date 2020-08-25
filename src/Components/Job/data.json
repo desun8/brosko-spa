@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Повар",
+      "img": "files/vacancies/6527c83e105459ab053b72a48f05c5e5.jpg",
+      "icon": "files/vacancies/a1ca39cce8ea9ab462e76e8bc77ab582.svg",
+      "color": "#2274A5",
+      "duties": "<ul>\r\n\t<li>Варить кашу</li>\r\n\t<li>Варить борщ</li>\r\n\t<li>Жарить овощи</li>\r\n</ul>",
+      "requirements": "<ul>\r\n\t<li>Коммуникабельность с овощами</li>\r\n\t<li>Умение работать ножом</li>\r\n\t<li>Не менее 10 лет опыта работы в Японии</li>\r\n</ul>",
+      "created_at": "2019-10-23 01:15:09",
+      "updated_at": "2019-10-23 01:15:15",
+      "url": "job-1"
+    },
+    {
+      "id": 2,
+      "name": "Повар 2",
+      "img": "files/vacancies/6527c83e105459ab053b72a48f05c5e5.jpg",
+      "icon": "files/vacancies/a1ca39cce8ea9ab462e76e8bc77ab582.svg",
+      "color": "#E23F50",
+      "duties": "<ul>\r\n\t<li>Варить кашу</li>\r\n\t<li>Варить борщ</li>\r\n\t<li>Жарить овощи</li>\r\n</ul>",
+      "requirements": "<ul>\r\n\t<li>Коммуникабельность с овощами</li>\r\n\t<li>Умение работать ножом</li>\r\n\t<li>Не менее 10 лет опыта работы в Японии</li>\r\n</ul>",
+      "created_at": "2019-10-23 01:15:09",
+      "updated_at": "2019-10-23 01:15:15",
+      "url": "job-2"
+    },
+    {
+      "id": 3,
+      "name": "Повар 3",
+      "img": "files/vacancies/6527c83e105459ab053b72a48f05c5e5.jpg",
+      "icon": "files/vacancies/a1ca39cce8ea9ab462e76e8bc77ab582.svg",
+      "color": "#FFB400",
+      "duties": "<ul>\r\n\t<li>Варить кашу</li>\r\n\t<li>Варить борщ</li>\r\n\t<li>Жарить овощи</li>\r\n</ul>",
+      "requirements": "<ul>\r\n\t<li>Коммуникабельность с овощами</li>\r\n\t<li>Умение работать ножом</li>\r\n\t<li>Не менее 10 лет опыта работы в Японии</li>\r\n</ul>",
+      "created_at": "2019-10-23 01:15:09",
+      "updated_at": "2019-10-23 01:15:15",
+      "url": "job-3"
+    }
+  ]
+}

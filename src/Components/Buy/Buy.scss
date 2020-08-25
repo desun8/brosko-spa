@@ -1,0 +1,372 @@
+.buy {
+  --card-width: 230px;
+  --card-height: 260px;
+  --card-ml: 20px;
+  --card-row-size: 3;
+
+  @media (--laptopMin) {
+    --card-width: 236px;
+    --card-height: 266px;
+    --card-ml: 50px;
+    --card-row-size: 2;
+  }
+
+  position: relative;
+  max-width: 100%;
+
+  @media (--laptopMin) {
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 200px;
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  height: 406px;
+  margin-bottom: 40px;
+
+  @media (--mobileLg) {
+    height: 456px;
+  }
+
+  @media (--laptopMin) {
+    position: sticky;
+    top: 100px;
+
+    align-items: flex-start;
+
+    width: 50%;
+    height: 500px;
+    margin-bottom: 0;
+    padding-top: 80px;
+  }
+
+  @media (--desktop1860) {
+    margin-bottom: 150px;
+  }
+
+  .logo {
+    @include bgImg('./img/logo-title-buy.svg', center, contain);
+
+    --width: 350px;
+    --height: 204px;
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: calc(var(--width) * 0.8);
+    height: calc(var(--height) * 0.8);
+    margin-bottom: 20px;
+
+    @media (--mobileSm) {
+      max-width: calc(var(--width) * 0.95);
+      height: calc(var(--height) * 0.95);
+      margin-bottom: 0;
+      transform: none;
+    }
+
+    @media (--mobileLg) {
+      max-width: var(--width);
+      height: var(--height);
+    }
+
+    @media (--laptopMin) {
+      --width: 580px;
+      --height: 300px;
+    }
+
+    @media (--laptopLg) {
+      --width: 660px;
+      --height: 380px;
+    }
+
+    @media (--desktop) {
+      --width: 816px;
+      --height: 472px;
+    }
+  }
+
+  .bg-pattern {
+    @include bgImg('../../img/bg-pattern.svg', center 70px, 340px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.4;
+
+    @media (--mobileSm) {
+      background-size: contain;
+      background-position-y: 50px;
+    }
+
+    @media (--mobileLg) {
+      background-position-y: 60px;
+    }
+
+    @media (--laptopMin) {
+      @include bgImg('../../img/bg-pattern-desk.svg', -62px top, 710px);
+
+      top: 50%;
+      height: 680px;
+    }
+
+    @media (--laptopLg) {
+      top: 68%;
+      background-position-x: 0;
+    }
+
+    @media (--desktop) {
+      top: 40%;
+      height: 1100px;
+      background-size: 1100px;
+      background-position-x: 120%;
+    }
+
+    @media (--desktop1860) {
+      top: 60%;
+    }
+  }
+}
+
+.card-list {
+  position: relative;
+  z-index: 10;
+
+  @media (--laptopMin) {
+    position: relative;
+    z-index: 5;
+
+    width: 50%;
+    padding-top: 200px;
+  }
+
+  @media (--desktop) {
+    padding-top: 400px;
+  }
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: calc((var(--card-width) * var(--card-row-size)) + (var(--card-ml) * var(--card-row-size)) + (var(--card-ml) * 2));
+    padding-left: 15px;
+
+    overflow-x: scroll;
+
+    @media (--laptopMin) {
+      width: calc((var(--card-width) * var(--card-row-size)) + (var(--card-ml) * var(--card-row-size)) + var(--card-ml));
+      overflow-x: hidden;
+      margin: 0 auto;
+    }
+  }
+}
+
+.card-show-all {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--card-width);
+  height: var(--card-height);
+  margin-left: var(--card-ml);
+
+
+  background-color: #7cb72e;
+
+  border-radius: 10px;
+
+  .bg {
+    @include bgImg('./img/bg-card-all.svg', center bottom, contain);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    opacity: 0.1;
+    overflow: hidden;
+  }
+
+  .text {
+    @include em(22, 24);
+
+    position: relative;
+    z-index: 2;
+
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.parallax-buy {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 4;
+
+  width: 100%;
+  height: 200px;
+
+  @media (--mobileLg) {
+    top: 5px;
+  }
+
+  @media (--laptopMin) {
+    top: 0;
+    // width: 150%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .duck {
+    @include bgImg('../../img/duck-parallax.svg', left center, 86px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 152px;
+
+    transform: translate3d(100%, -60px, 0);
+    will-change: transform;
+
+    @media (--mobileSm) {
+      top: -10px;
+    }
+
+    @media (--mobileLg) {
+      top: 12px;
+    }
+
+    @media (--laptopMin) {
+      top: 0;
+      left: 0;
+      transform: scaleX(-1) translateX(200px);
+
+      width: 100%;
+      height: 100%;
+      background-position-x: right;
+      background-position-y: 100px;
+    }
+
+    @media (--laptopLg) {
+      background-position-y: 150px;
+    }
+
+    @media (--mac) {
+      background-position-y: 168px;
+    }
+
+    @media (--lowHeight) {
+      background-position-y: 140px;
+    }
+
+    @media (--desktop) {
+      background-position-y: 240px;
+    }
+
+    @media (--desktopLg) {
+      background-position-y: 220px;
+    }
+
+    // @media (--desktop1860) {
+    //   background-position-y: 30%;
+    // }
+  }
+
+  .prints {
+    position: absolute;
+    top: -5px;
+    right: 0;
+
+    width: 100%;
+    height: 166px;
+
+    @media (--mobileSm) {
+      top: -30px;
+    }
+
+    @media (--mobileLg) {
+      top: -10px;
+    }
+
+    @media (--laptopMin) {
+      top: 225px;
+      transform: scaleX(-1);
+    }
+
+    @media (--laptopLg) {
+      top: 280px;
+    }
+
+    @media (--desktop) {
+      top: 370px;
+    }
+
+    @media (--desktopLg) {
+      top: 340px;
+    }
+
+    @media (--desktop1860) {
+      top: 37%;
+    }
+
+    /deep/ svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      path {
+        fill: transparent;
+      }
+
+      g path {
+        fill: transparent;
+      }
+    }
+  }
+}
+
+.link-insta {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  background: #eaaa19;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(238, 66, 84, 0.15);
+
+  svg {
+    max-width: 74%;
+    fill: #fff;
+  }
+}

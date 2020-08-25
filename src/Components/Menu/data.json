@@ -1,0 +1,32 @@
+{
+  "menu": [
+    {
+      "name": "В начало",
+      "anchor": "#sectionHero"
+    },
+    {
+      "name": "Что купить",
+      "anchor": "#sectionBuy"
+    },
+    {
+      "name": "Куда сходить",
+      "anchor": "#sectionPlaces"
+    },
+    {
+      "name": "Акции",
+      "anchor": "#sectionProducts"
+    },
+    {
+      "name": "СОБЫТИЯ",
+      "anchor": "#sectionEvents"
+    },
+    {
+      "name": "ВАКАНСИИ",
+      "anchor": "#sectionJob"
+    },
+    {
+      "name": "КОНТАКТЫ",
+      "anchor": "#sectionContacts"
+    }
+  ]
+}

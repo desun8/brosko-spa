@@ -1,0 +1,27 @@
+/* Телефоны
+  22.5em = 360px
+  23.438em = 375px
+  25em = 400px
+*/
+@custom-media --mobile (width >= 22.5em);
+@custom-media --mobileSm (width >= 23.438em);
+@custom-media --mobileLg (width >= 25em);
+
+/* Планшеты и устройства с небольшими диоганалями */
+@custom-media --onlySm (width <= 48em);
+@custom-media --tablet (width >= 48em);
+@custom-media --tabletPro (width >= 85.375em) and (height = 64em);
+
+/* Десктоп и большие экраны */
+@custom-media --laptopMin (width >= 68.75em);
+@custom-media --laptop (width >= 80em);
+@custom-media --laptopLg (width >= 90em);
+@custom-media --desktop (width >= 96.5em);
+@custom-media --desktopLg (width >= 102.5em);
+@custom-media --desktop1860 (width >= 116.25em);
+
+@custom-media --onlyLaptop (--laptopMin) and (width <= 116em);
+
+/* Вин ноутбуки  с разрешением 1366х768. У них реальная высота окна ~615px  */
+@custom-media --lowHeight (width >= 68.75em) and (height <= 46.25em);
+@custom-media --mac (width >= 90em) and (height < 55em);

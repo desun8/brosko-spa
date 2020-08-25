@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Новый Год",
+      "img": "files/events/c1c016b81379a29d90e4422b88ef1325.jpg",
+      "instagram": "http://instagr.am/p/fA9uwTtkSN/",
+      "date": "2019-10-26",
+      "desc": "<p>Праздник к нам приходит!</p>\r\n\r\n<p><input class=\"tgallery\" data-id=\"0\" disabled=\"disabled\" type=\"text\" value=\"Галерея #1\" /></p>",
+      "gallery": [
+        [
+          "files/events/8b24211cede9eaeadf1f8de32cba86b2.jpg",
+          "files/events/485012ff9a06020f20f121a97debc4b0.jpg"
+        ]
+      ],
+      "created_at": "2019-10-24 00:14:29",
+      "updated_at": "2019-10-24 00:46:43"
+    },
+    {
+      "id": 2,
+      "name": "Новый Год 2",
+      "img": "files/events/c1c016b81379a29d90e4422b88ef1325.jpg",
+      "instagram": "http://instagr.am/p/fA9uwTtkSN/",
+      "date": "2019-10-26",
+      "desc": "<p>Праздник к нам приходит!</p>\r\n\r\n<p><input class=\"tgallery\" data-id=\"0\" disabled=\"disabled\" type=\"text\" value=\"Галерея #1\" /></p>",
+      "gallery": [
+        [
+          "files/events/8b24211cede9eaeadf1f8de32cba86b2.jpg",
+          "files/events/485012ff9a06020f20f121a97debc4b0.jpg"
+        ]
+      ],
+      "created_at": "2019-10-24 00:14:29",
+      "updated_at": "2019-10-24 00:46:43"
+    },
+    {
+      "id": 3,
+      "name": "Новый Год 3",
+      "img": "files/events/c1c016b81379a29d90e4422b88ef1325.jpg",
+      "instagram": "http://instagr.am/p/fA9uwTtkSN/",
+      "date": "2019-10-26",
+      "desc": "<p>Праздник к нам приходит!</p>\r\n\r\n<p><input class=\"tgallery\" data-id=\"0\" disabled=\"disabled\" type=\"text\" value=\"Галерея #1\" /></p>",
+      "gallery": [
+        [
+          "files/events/8b24211cede9eaeadf1f8de32cba86b2.jpg",
+          "files/events/485012ff9a06020f20f121a97debc4b0.jpg"
+        ]
+      ],
+      "created_at": "2019-10-24 00:14:29",
+      "updated_at": "2019-10-24 00:46:43"
+    }
+  ]
+}

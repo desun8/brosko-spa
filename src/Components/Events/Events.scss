@@ -1,0 +1,347 @@
+.events {
+  position: relative;
+  max-width: 100%;
+  padding-top: 100px;
+  overflow: hidden;
+  z-index: 4;
+
+  @media (--laptopMin) {
+    display: flex;
+    justify-content: center;
+
+    min-height: 800px;
+    overflow: visible;
+    // z-index: 7;
+  }
+
+  @media (--desktop) {
+    min-height: 1000px;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  height: 384px;
+  margin-bottom: 20px;
+
+  @media (--mobileLg) {
+    height: 424px;
+  }
+
+  @media (--laptopMin) {
+    align-items: flex-start;
+
+    width: 50%;
+    height: initial;
+    margin-bottom: 0;
+    padding-top: 80px;
+  }
+
+  @media (--desktop) {
+    margin-bottom: 200px;
+  }
+
+  .logo {
+    @include bgImg('./img/logo-title-events.svg', center, contain);
+
+    --width: 350px;
+    --height: 204px;
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: calc(var(--width) * 0.8);
+    height: calc(var(--height) * 0.8);
+    margin-bottom: 20px;
+
+    @media (--mobileSm) {
+      max-width: calc(var(--width) * 0.95);
+      height: calc(var(--height) * 0.95);
+      margin-bottom: 10px;
+    }
+
+    @media (--mobileLg) {
+      max-width: var(--width);
+      height: var(--height);
+    }
+
+    @media (--laptopMin) {
+      --width: 580px;
+      --height: 300px;
+    }
+
+    @media (--laptopLg) {
+      --width: 660px;
+      --height: 380px;
+    }
+
+    @media (--desktop) {
+      --width: 816px;
+      --height: 472px;
+    }
+  }
+
+  .bg-pattern {
+    @include bgImg('../../img/bg-pattern-events.svg', center 35px, 340px);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.6;
+
+    @media (--mobileSm) {
+      background-size: 390px;
+      background-position-y: 0;
+    }
+
+    @media (--mobileLg) {
+      background-size: 420px;
+    }
+
+    @media (--laptopMin) {
+      @include bgImg('../../img/bg-pattern-wave-desk.svg', -70px top, 710px);
+
+      top: 34%;
+      height: 680px;
+      opacity: 0.4;
+    }
+
+    @media (--laptopLg) {
+      top: 40%;
+    }
+
+    @media (--desktop) {
+      top: 24%;
+      height: 1100px;
+      background-size: 1100px;
+      background-position-x: 120%;
+    }
+
+    @media (--desktop1860) {
+      top: 34%;
+    }
+
+    &::after {
+      @include bgImg('../../img/amur.svg', center, 296px);
+
+      position: absolute;
+      top: 30%;
+      left: 10%;
+
+      width: 300px;
+      height: 174px;
+
+      opacity: 0.1;
+
+      @media (--laptopMin) {
+        content: '';
+      }
+
+      @media (--desktop) {
+        top: 40%;
+      }
+
+      @media (--desktop1860) {
+        top: 35%;
+      }
+    }
+  }
+}
+
+
+.card-list {
+  padding: 0 10px;
+
+  @media (--laptopMin) {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+
+    @media (--laptopMin) {
+      --card-width: 264px;
+      --card-height: 264px;
+      --card-mb: 40px;
+      --card-row-size: 2;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      width: calc((var(--card-width) + var(--card-mb)) * var(--card-row-size));
+      margin-bottom: 50px;
+      padding-top: 80px;
+    }
+  }
+}
+
+.parallax-events {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  // top: -20px;
+  top: 0;
+
+  width: 100%;
+  height: 400px;
+
+  transform: translate3d(-100%, -30px, 0);
+
+  @media (--mobileSm) {
+    // top: 60px;
+  }
+
+  @media (--mobileLg) {
+    // top: -80px;
+    // transform: translate3d(-100%, -30px, 0);
+    // transform: translateX(-100%);
+  }
+
+  @media (--onlySm) {
+    will-change: transform;
+  }
+
+  @media (--laptopMin) {
+    // display: none;
+    // top: 20%;
+    // left: -300px;
+    // width: 240px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 200%;
+    // transform: translateX(-300px);
+    // transform: none;
+    // border: 1px solid red;
+
+    // position: fixed;
+    top: 10%;
+    overflow: hidden;
+    transform: none;
+  }
+
+  @media (--desktop) {
+    // top: 35%;
+  }
+
+  @media (--desktop1860) {
+    // top: 45%;
+  }
+
+  &_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-4px);
+
+    @media (--onlySm) {
+      @include bgImg('./img/ducks.svg', center 20px, 240px);
+    }
+
+    @media (--mobileSm) {
+      transform: translateY(-8px);
+    }
+
+    @media (--mobileLg) {
+      transform: none;
+    }
+
+    @media (--laptopMin) {
+      height: 50%;
+      transform: translateX(-300px);
+    }
+  }
+
+  .duck,
+  .child {
+    position: absolute;
+    z-index: 4;
+
+    @media (--onlySm) {
+      display: none;
+    }
+  }
+
+  .duck {
+    @include bgImg('../../img/duck-parallax.svg', center, contain);
+
+    top: 0;
+    left: 60%;
+
+    // top: 20px;
+    // left: 0;
+
+    width: 86px;
+    height: 152px;
+    transform: scaleX(-1);
+
+    @media (--laptopMin) {
+      // top: 100%;
+      // top: 20px;
+      // left: 80%;
+      top: 40%;
+      left: 200px;
+    }
+  }
+
+  .child {
+    @include bgImg('../../img/duck-child-parallax.svg', center, contain);
+
+    top: 28px;
+    left: 44%;
+
+    width: 35px;
+    height: 47px;
+
+    @media (--laptopMin) {
+      top: 42%;
+      left: 130px;
+    }
+
+    &--2 {
+      top: -6px;
+      left: 29%;
+
+      @media (--laptopMin) {
+        top: 38%;
+        left: 90px;
+      }
+    }
+
+    &--3 {
+      top: -36px;
+      left: 10%;
+
+      @media (--laptopMin) {
+        top: 34%;
+        left: 42px;
+      }
+    }
+
+    &--small {
+      width: 25px;
+      height: 34px;
+    }
+  }
+}
